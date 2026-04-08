@@ -13,7 +13,7 @@
   :root { 
     --bg: #07070f; --bg2: #0e0e1a; --fucsia: #ff2d78; --amarillo: #ffe600; 
     --blanco: #ffffff; --gris: #666680; --gris2: #333345; 
-    --cian: #00f2ff; 
+    --naranja-vibrante: #ff6a00; /* Nuevo color: Naranja eléctrico vibrante */
     --insta: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -56,7 +56,13 @@
 
   /* BOTONES REESTILIZADOS */
   .btn-save { background: var(--fucsia); color: var(--blanco); font-size: 13px; padding: 10px; }
-  .btn-copy-link { background: var(--cian); color: #003a3d; font-size: 12px; padding: 8px; font-weight: 900; } /* Texto oscuro para contraste */
+  .btn-copy-link { 
+    background: var(--naranja-vibrante); /* Nuevo color de fondo */
+    color: var(--blanco); /* Texto blanco resalta */
+    font-size: 12px; 
+    padding: 8px; 
+    font-weight: 900;
+  }
   .btn-instagram { background: var(--insta); color: var(--blanco); font-size: 12px; padding: 8px; }
 
   /* PASOS */
@@ -65,7 +71,7 @@
   .step-t { font-weight: 900; font-size: 13px; margin-bottom: 2px; }
   .step-d { font-size: 11px; color: var(--gris); line-height: 1.5; }
 
-  .wa-wrap { margin: 24px; padding: 32px 24px; border: 1px solid rgba(255,45,120,0.15); border-radius: 16px; text-align: center; background: var(--bg2); }
+  .wa-wrap { margin: 24px; padding: 32px 24px; border: 1px solid rgba(255,45,120,0.15); border-radius: 166px; text-align: center; background: var(--bg2); }
   .btn-wa { background: #25d366; color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 18px; padding: 14px 32px; border-radius: 100px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
   footer { text-align: center; padding: 40px; font-family: 'Bebas Neue', sans-serif; font-size: 11px; letter-spacing: 4px; color: #2a2a3a; }
 </style>
@@ -217,4 +223,4 @@
   render();
 </script>
 </body>
-</html>
+  </html>
