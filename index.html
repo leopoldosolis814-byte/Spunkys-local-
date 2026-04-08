@@ -13,7 +13,7 @@
   :root { 
     --bg: #07070f; --bg2: #0e0e1a; --fucsia: #ff2d78; --amarillo: #ffe600; 
     --blanco: #ffffff; --gris: #666680; --gris2: #333345; 
-    --cian: #00f2ff; /* Color nuevo llamativo */
+    --cian: #00f2ff; 
     --insta: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -23,6 +23,7 @@
   .logo { font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 4px; color: var(--blanco); }
   .logo em { color: var(--fucsia); font-style: normal; }
   .rubro-tag { font-family: 'Bebas Neue', sans-serif; font-size: 11px; letter-spacing: 4px; color: var(--fucsia); }
+  
   .hero { position: relative; padding: 72px 28px 64px; text-align: center; overflow: hidden; }
   .hero-glow { position: absolute; top: -80px; left: 50%; transform: translateX(-50%); width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,45,120,0.08) 0%, transparent 65%); pointer-events: none; }
   .hero-title { font-family: 'Bebas Neue', sans-serif; font-size: 58px; line-height: 0.95; color: var(--blanco); letter-spacing: 1px; margin-bottom: 20px; }
@@ -46,26 +47,22 @@
   .thumb-wrap { position: relative; aspect-ratio: 9/16; background: #0a0a14; }
   .thumb { width: 100%; height: 100%; object-fit: cover; }
   .thumb-num { position: absolute; top: 8px; left: 8px; background: rgba(7,7,15,0.8); font-family: 'Bebas Neue', sans-serif; font-size: 10px; padding: 3px 7px; border-radius: 3px; color: var(--gris); z-index: 5; }
-  
   .lock-layer { position: absolute; inset: 0; background: rgba(7,7,15,0.75); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; backdrop-filter: blur(2px); z-index: 10; }
   .lock-label { font-family: 'Bebas Neue', sans-serif; font-size: 9px; letter-spacing: 4px; color: var(--fucsia); }
   
   .item-foot { padding: 10px; display: flex; flex-direction: column; gap: 6px; }
-  
-  /* ESTILOS DE BOTONES */
-  .btn-ui { 
-    display: block; width: 100%; font-family: 'Bebas Neue', sans-serif; 
-    text-align: center; border-radius: 6px; cursor: pointer; 
-    text-decoration: none; border: none; letter-spacing: 1px;
-    transition: transform 0.2s;
-  }
+  .btn-ui { display: block; width: 100%; font-family: 'Bebas Neue', sans-serif; text-align: center; border-radius: 6px; cursor: pointer; text-decoration: none; border: none; letter-spacing: 1px; transition: transform 0.2s; }
   .btn-ui:active { transform: scale(0.96); }
-
   .btn-save { background: var(--fucsia); color: var(--blanco); font-size: 13px; padding: 10px; }
   .btn-copy-link { background: var(--cian); color: #003a3d; font-size: 12px; padding: 8px; }
   .btn-instagram { background: var(--insta); color: var(--blanco); font-size: 12px; padding: 8px; }
 
-  /* FOOTER Y DEMÁS */
+  /* PASOS */
+  .step { display: flex; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+  .step-n { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--fucsia); opacity: 0.5; }
+  .step-t { font-weight: 900; font-size: 13px; margin-bottom: 2px; }
+  .step-d { font-size: 11px; color: var(--gris); line-height: 1.5; }
+
   .wa-wrap { margin: 24px; padding: 32px 24px; border: 1px solid rgba(255,45,120,0.15); border-radius: 16px; text-align: center; background: var(--bg2); }
   .btn-wa { background: #25d366; color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 18px; padding: 14px 32px; border-radius: 100px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
   footer { text-align: center; padding: 40px; font-family: 'Bebas Neue', sans-serif; font-size: 11px; letter-spacing: 4px; color: #2a2a3a; }
@@ -104,6 +101,39 @@
     <div class="chevron">▼</div>
   </div>
   <div class="section-body"><div class="content-grid" id="gVid"></div></div>
+</div>
+
+<div class="section" id="s-uso">
+  <div class="section-header" onclick="tog('s-uso')">
+    <div class="section-left">
+      <div class="section-title">CÓMO <em>PUBLICAR</em></div>
+      <div class="section-count">GUÍA EN 3 PASOS</div>
+    </div>
+    <div class="chevron">▼</div>
+  </div>
+  <div class="section-body">
+    <div class="step">
+      <div class="step-n">1</div>
+      <div>
+        <div class="step-t">Guardá el archivo</div>
+        <div class="step-d">Tocá en "GUARDAR CONTENIDO" y guardalo en tu galería. Se abrirá en una pestaña nueva para no cerrar esta página.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">2</div>
+      <div>
+        <div class="step-t">Copiá tu link</div>
+        <div class="step-d">Tocá en "COPIAR ENLACE". Es el link que debés pegar en el Sticker de Instagram.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">3</div>
+      <div>
+        <div class="step-t">¡A Instagram!</div>
+        <div class="step-d">Tocá en "ABRIR INSTAGRAM", seleccioná tu archivo y pegá el link en el sticker.</div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="wa-wrap">
@@ -150,8 +180,6 @@
       : `<img class="thumb" src="${it.src}" loading="lazy">`;
 
     const lock = !on ? `<div class="lock-layer"><div class="lock-label">🔒 NO INCLUIDO</div></div>` : '';
-    
-    // Solo mostramos botones si está activa
     const buttons = on ? `
       <a class="btn-ui btn-save" href="${it.src}" target="_blank" rel="noopener noreferrer">⬇ GUARDAR CONTENIDO</a>
       <button class="btn-ui btn-copy-link" onclick="copyLink(this, '${linkGlobal}')">🔗 COPIAR ENLACE</button>
@@ -161,9 +189,7 @@
     return `
     <div class="item">
       <div class="thumb-wrap">${media}<div class="thumb-num">${label}</div>${lock}</div>
-      <div class="item-foot">
-        ${buttons}
-      </div>
+      <div class="item-foot">${buttons}</div>
     </div>`;
   }
 
@@ -189,4 +215,4 @@
   render();
 </script>
 </body>
-  </html>
+</html>
